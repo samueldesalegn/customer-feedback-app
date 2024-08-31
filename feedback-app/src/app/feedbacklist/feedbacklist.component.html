@@ -1,0 +1,22 @@
+@for (feedback of feedbacks(); track feedback.event_id) {
+	 <div>
+    <h3>{{ feedback.event_name }}</h3>
+    <p><strong>Event Rate:</strong> {{ feedback.event_rate }}</p>
+    <p><strong>Why this Rate:</strong> {{ feedback.why_this_rate }}</p>
+    <p><strong>Presentation Content:</strong> {{ feedback.presentation_content }}</p>
+    <p><strong>Session Duration:</strong> {{ feedback.session_duration }}</p>
+    <p><strong>Hands-On Lab:</strong> {{ feedback.hands_on_lab }}</p>
+    <p><strong>Event Platform:</strong> {{ feedback.event_platform }}</p>
+    <p><strong>Presenter Name:</strong> {{ feedback.presenter_name }}</p>
+    <p><strong>Presenter Rate:</strong> {{ feedback.presenter_rate }}</p>
+    <p><strong>Feedback to Presenter:</strong> {{ feedback.feedback_to_presenter }}</p>
+    <p><strong>Lab Trainer:</strong> {{ feedback.lab_trainer }}</p>
+    <p><strong>Lab Trainer Rate:</strong> {{ feedback.lab_trainer_rate }}</p>
+    <p><strong>Feedback for Trainer:</strong> {{ feedback.feedback_for_trainer }}</p>
+    <p><strong>Lab Session Improvements:</strong> {{ feedback.lab_session_improvements }}</p>
+    <p><strong>Future Topics Suggest:</strong> {{ feedback.future_topics_suggest }}</p>
+    <p><strong>How You Heard About Event:</strong> {{ feedback.how_you_heard_about_event }}</p>
+  </div>
+  <hr>
+}
+

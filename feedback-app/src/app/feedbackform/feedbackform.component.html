@@ -1,0 +1,128 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+  <!-- Event Name -->
+  <div class="form-group">
+    <label for="event_name">Event Name:</label>
+    <input id="event_name" formControlName="event_name" required>
+    @if (feedbackForm.controls['event_name'].invalid && feedbackForm.controls['event_name'].touched) {
+      <div class="error-message">
+        Event Name is required.
+      </div>
+    }
+  </div>
+
+  <!-- Event Date -->
+  <div class="form-group">
+    <label for="event_date">Event Date:</label>
+    <input id="event_date" type="date" formControlName="event_date" required>
+    @if (feedbackForm.controls['event_date'].invalid && feedbackForm.controls['event_date'].touched) {
+      <div class="error-message">
+        Event Date is required.
+      </div>
+    }
+  </div>
+
+  <!-- Event Rate -->
+  <div class="form-group">
+    <label for="event_rate">Event Rate:</label>
+    <input id="event_rate" type="number" formControlName="event_rate" required>
+    @if (feedbackForm.controls['event_rate'].invalid && feedbackForm.controls['event_rate'].touched) {
+      <div class="error-message">
+        Event Rate is required and must be a number.
+      </div>
+    }
+  </div>
+
+  <!-- Why This Rate -->
+  <div class="form-group">
+    <label for="why_this_rate">Why This Rate:</label>
+    <textarea id="why_this_rate" formControlName="why_this_rate" required></textarea>
+    @if (feedbackForm.controls['why_this_rate'].invalid && feedbackForm.controls['why_this_rate'].touched) {
+      <div class="error-message">
+        Explanation for the rate is required.
+      </div>
+    }
+  </div>
+
+  <!-- Presentation Content -->
+  <div class="form-group">
+    <label for="presentation_content">Presentation Content:</label>
+    <textarea id="presentation_content" formControlName="presentation_content"></textarea>
+  </div>
+
+  <!-- Session Duration -->
+  <div class="form-group">
+    <label for="session_duration">Session Duration:</label>
+    <input id="session_duration" type="number" formControlName="session_duration">
+  </div>
+
+  <!-- Hands-On Lab -->
+  <div class="form-group">
+    <label for="hands_on_lab">Hands-On Lab:</label>
+    <input id="hands_on_lab" type="number" formControlName="hands_on_lab">
+  </div>
+
+  <!-- Event Platform -->
+  <div class="form-group">
+    <label for="event_platform">Event Platform:</label>
+    <input id="event_platform" type="number" formControlName="event_platform">
+  </div>
+
+  <!-- Presenter Name -->
+  <div class="form-group">
+    <label for="presenter_name">Presenter Name:</label>
+    <input id="presenter_name" formControlName="presenter_name">
+  </div>
+
+  <!-- Presenter Rate -->
+  <div class="form-group">
+    <label for="presenter_rate">Presenter Rate:</label>
+    <input id="presenter_rate" type="number" formControlName="presenter_rate">
+  </div>
+
+  <!-- Feedback to Presenter -->
+  <div class="form-group">
+    <label for="feedback_to_presenter">Feedback to Presenter:</label>
+    <textarea id="feedback_to_presenter" formControlName="feedback_to_presenter"></textarea>
+  </div>
+
+  <!-- Lab Trainer -->
+  <div class="form-group">
+    <label for="lab_trainer">Lab Trainer:</label>
+    <input id="lab_trainer" formControlName="lab_trainer">
+  </div>
+
+  <!-- Lab Trainer Rate -->
+  <div class="form-group">
+    <label for="lab_trainer_rate">Lab Trainer Rate:</label>
+    <input id="lab_trainer_rate" type="number" formControlName="lab_trainer_rate">
+  </div>
+
+  <!-- Feedback for Trainer -->
+  <div class="form-group">
+    <label for="feedback_for_trainer">Feedback for Trainer:</label>
+    <textarea id="feedback_for_trainer" formControlName="feedback_for_trainer"></textarea>
+  </div>
+
+  <!-- Lab Session Improvements -->
+  <div class="form-group">
+    <label for="lab_session_improvements">Lab Session Improvements:</label>
+    <textarea id="lab_session_improvements" formControlName="lab_session_improvements"></textarea>
+  </div>
+
+  <!-- Future Topics Suggest -->
+  <div class="form-group">
+    <label for="future_topics_suggest">Future Topics Suggest:</label>
+    <textarea id="future_topics_suggest" formControlName="future_topics_suggest"></textarea>
+  </div>
+
+  <!-- How You Heard About Event -->
+  <div class="form-group">
+    <label for="how_you_heard_about_event">How You Heard About Event:</label>
+    <input id="how_you_heard_about_event" formControlName="how_you_heard_about_event">
+  </div>
+
+  <!-- Submit Button -->
+  <div class="form-group">
+    <button type="submit" [disabled]="feedbackForm.invalid">Submit Feedback</button>
+  </div>
+</form>

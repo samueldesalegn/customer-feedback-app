@@ -1,0 +1,85 @@
+/* Container for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Style for the labels */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  display: inline-block;
+  width: 200px; /* Adjust width for labels */
+}
+
+/* Style for the input fields */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  width: calc(100% - 220px); /* Adjust width to fit next to the labels */
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Style for the textarea fields */
+textarea {
+  width: 100%; /* Full width */
+  height: 50px; /* Reduce the height */
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none; /* Prevent resizing by the user */
+}
+
+/* Focus state for textarea fields */
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Focus state for input fields */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Add some space above the button */
+  align-self: flex-end; /* Align the button to the right */
+}
+
+/* Hover state for the submit button */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled state for the submit button */
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,26 @@
+/* Style for the navigation bar */
+nav {
+  background-color: #007bff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style for the links in the navigation bar */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Hover state for the navigation links */
+nav a:hover {
+  color: #dcdcdc;
+}
+
+/* Style for the main container */
+.main-container {
+  padding: 20px;
+}
